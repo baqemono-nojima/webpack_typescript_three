@@ -1,0 +1,43 @@
+@import "../../_mixin/index"
+
+.c-form
+
+    label
+        display: block
+        position: relative
+        cursor: pointer
+
+    &__text
+        >label
+            input
+                +reset-input-style
+
+    &__textarea
+        >label
+            textarea
+                +reset-input-style
+
+    &__radio
+        >label
+            >input
+            >span
+
+    &__checkbox
+        +reset-selection
+            
+        >label
+
+            >input
+                +reset-input-style
+
+            >input:checked
+                ~span,
+                ~em
+
+            >span,
+            >em
+
+    &__select
+        >label
+            select
+                +reset-input-style
